@@ -1,0 +1,619 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,
+acronym,address,big,cite,code,del,dfn,em,
+img,ins,kbd,q,s,samp,small,strike,strong,
+sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,
+ul,li,fieldset,form,label,legend,table,
+caption,tbody,tfoot,thead,tr,th,td,article,
+aside,canvas,details,embed,figure,figcaption,
+footer,header,hgroup,menu,nav,output,ruby,
+section,summary,time,mark,audio,video 
+{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,
+header,hgroup,menu,nav,section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,blockquote:after,
+q:before,q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+/* google map 搜尋設定 */
+
+#map {
+	height: 700px;
+	z-index: 0;	/*重疊顯示優先順序越大越上層*/
+
+}
+
+#pac-input {
+	/* background-color: #fff; */
+	font-family: Roboto;
+	font-size: 20px;
+	margin-left: 12px;
+	padding: 0 11px 0 13px;
+	text-overflow: ellipsis;
+	width: 265px;
+	height: 40px;
+	position: absolute;
+	z-index: 1;
+	margin-top: 10px;
+	border-radius: 8px 0 0 8px;
+	border: none;
+	outline: medium;
+	box-shadow: 0 50px 0px 0px #ffffff inset;
+}
+
+#pac-input:focus {
+	border-color: #4d90fe;
+}
+
+.controls {
+	margin-left: 300px;
+	margin-top: 10px;
+	font-size: 25px;
+	position: absolute;
+	z-index: 1;
+	padding: 9.5px 15px 5px 15px;
+	background: transparent;
+	background-color: #fff;
+}
+
+.controls::after {
+	border-left: 5px solid rgb(131, 131, 131);
+	content: "";
+	position: absolute;
+	right: 0px;
+	height: 26px;
+	z-index: 2;
+}
+
+.controls:hover::before {
+	position: absolute;
+	width: 30px;
+	text-align: center;
+	top: 40px;
+	left: 20px;
+	color: #fff;
+	font-size: .5em;
+	background: #000000;
+	padding: 5px;
+	border-radius: 10px;
+	content: '搜尋';
+}
+
+.controls1 {
+	margin-left: 349px;
+	margin-top: 10px;
+	padding: 9.5px 15px 5px 15px;
+	font-size: 25px;
+	position: absolute;
+	z-index: 1;	/*重疊顯示優先順序越大越上層*/
+	background-color: #fff;
+	border-radius: 0 8px 8px 0;
+}
+
+/* 搜尋清除顯示字元 */
+.controls1:hover::before {
+	position: absolute;
+	width: 50px;
+	top: 40px;
+	left: 40px;
+	color: #fff;
+	font-size: .5em;
+	background: #000000;
+	padding: 5px;
+	border-radius: 10px;
+	content: '清除搜尋';
+}
+
+
+
+
+
+/* 統一設定 */
+
+h1,h2,h3 {
+	margin-top: 5px;
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+a {
+	text-decoration: none;
+}
+a:link {
+	color:#000000; /*未按過連結的顏色*/
+}
+a:visited {
+	color:#000000; /*已按過連結的顏色*/
+}
+
+textarea {
+	resize: none;
+}
+
+.travel__option--menu,
+.travel__money--menu {
+	margin-top: 100px;
+}
+
+/* 點擊連結導覽列不會遮擋 */
+:target:before {
+	content: "";
+	display: block;
+	height: 100px;
+}
+
+
+/* 導覽設定檔 */
+.header__menu {
+	max-width: 100%;
+	height: 100px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	/* background-color: white; */
+	position: sticky;
+	top: 0px;
+	z-index: 2;
+	/*重疊顯示優先順序越大越上層*/
+
+}
+
+.navul,
+.header__nav {
+	
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 30px;
+	margin-left: 10px;
+
+}
+
+.navul__menu {
+	font-size: 50px;
+	margin-left: 50%;
+	margin-top: 25px;
+}
+
+
+
+/* 旅遊規劃設定 */
+.travel__mappoto {
+	margin: 10px 10px 0 10px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.travel__mappoto--text {
+	margin-top: 50px;
+}
+
+.travel__mappoto--frame {
+	/* height: 400px; */
+	margin-top: 50px;
+	margin-left: 10px;
+}
+
+.travel__mappoto--date {
+	font-size: 20px;
+}
+
+.travel__mappoto--ul {
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.travel__mappoto--li,
+.travel__mappoto--li1 {
+	font-size: 20px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+}
+
+.travel__mappoto--li1 {
+	width: 300px;
+}
+
+@media screen and (max-width:768px) {
+
+	.travel__mappoto--li,
+	.travel__mappoto--li1 {
+		font-size: 14px;
+	}
+}
+
+/* 旅遊預算設定 */
+.travel__money--menu {
+	text-align: center;
+
+}
+
+
+.travel__money--mealtime {
+	margin-top: 50px;
+}
+
+.travel__money--time {
+	margin-bottom: 50px;
+	font-size: 20px;
+}
+
+.travel__money--ul,
+.travel__money--inmoney,
+.travel__money--input {
+	font-size: 20px;
+	margin-bottom: 20px;
+	margin-right: 10px;
+}
+
+.travel__money--ul {
+	height: 300px;
+	display: flex;
+	flex-flow: column wrap;
+	/* align-content: center; */
+
+
+}
+
+.travel__money--input {
+	width: 160px;
+}
+
+.travel__money--inmoney {
+	width: 50px;
+}
+
+.travel__money--ton {
+	
+	margin-bottom: 50px;
+}
+
+.travel__money--button {
+	font-size: 17px;
+}
+
+.travel__money--menuall {
+	width: 300px;
+	display: inline-block;
+	/* margin-top: 50px; */
+}
+
+
+
+.menu-none {
+	display: none;
+}
+
+@media screen and (max-width:1200px) {
+	.travel__money--ul {
+		height: 450px;
+		display: flex;
+		flex-flow: column wrap;
+		align-content: center;
+
+	}
+
+	.menu-none {
+		display: none;
+	}
+
+	
+
+}
+
+@media screen and (max-width:768px) {
+
+	.travel__money--time {
+		display: inline-block;
+	}
+
+	.travel__money--menu,
+	.mappoto {
+		text-align: center;
+	}
+
+	.travel__money--ul {
+		height: auto;
+		display: flex;
+		flex-flow: column wrap;
+		align-content: center;
+
+	}
+
+	.menu-none {
+		display: none;
+	}
+}
+
+
+
+/* 旅遊備忘設定 */
+.travel__option--menu {
+	text-align: center;
+}
+
+.travel__option {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 30px;
+}
+
+.travel__menu--check {
+	height: 300px;
+	display: flex;
+	flex-flow: column wrap;
+	align-content: center;
+	font-size: 35px;
+	margin-top: 50px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.travel__menu--box {
+	width: 20px;
+	height: 20px;
+	margin-left: 20px;
+}
+
+@media screen and (max-width:768px) {
+	.travel__menu--check {
+		font-size: 25px;
+	}
+}
+
+
+
+/* 旅遊分享設定 */
+.travel__share--text {
+	text-align: center;
+	/* margin-top: 100px; */
+	margin-bottom: 50px;
+}
+
+.travel__share--menu {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px;
+	font-size: 100px;
+}
+
+.travel__share--poto {
+	width: 100%;
+	height: 100%;
+}
+
+@media screen and (max-width:768px) {
+	.travel__share {
+		display: none;
+	}
+
+}
+
+
+
+
+/* 手機選單 */
+/* 彈窗 */
+/* .header__mobileMenu {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: #fff;
+	z-index: 1000;
+	transform-origin: left top;
+	transform: scale(0);
+	transition: .5s;
+}
+
+.header__mobileMenu.open {
+	transform: scale(1);
+}
+
+.mobileMenu {
+	height: calc(100vh - 45px);
+	overflow-y: scroll;
+	padding: 20px;
+	text-align: center;
+} */
+
+/* 滑窗 */
+.header__mobileMenu {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: #fff;
+	top: 0;
+	left: -100vw;
+	transition: 0.5s;
+	z-index: 3;
+}
+
+.header__mobileMenu.open {
+	left: 0;
+
+}
+
+.mobileMenu {
+	height: calc(100vh - 45px);
+	overflow-y: scroll;
+	padding: 20px;
+	text-align: center;
+}
+
+
+
+/* ICON */
+.icon {
+	font-size: 50px;
+	margin: 8px 0;
+	color: #fff;
+}
+
+/* 手機版選單設定 */
+.menu__link--text {
+	display: flex;
+	align-items: center;
+}
+
+.header__mobileBtn {
+	width: 120px;
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: linear-gradient(-45deg, #00f2ff 0%, #4ed8b5 50%, #25a9c0 100%);
+}
+
+.menu {
+	display: flex;
+}
+
+/* 手機選單內位置 */
+.mobileMenu__header {
+	font-size: 25px;
+	font-family: cursive, '新細明體', sans-serif;
+	margin: 20px;
+	padding: 20px;
+	background-color: plum;
+	text-align: center;
+}
+
+.menu--column {
+	display: flex;
+	flex-direction: column;
+}
+
+.menu__link--block {
+	color: #4d4d4d;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	border-bottom: 1px solid #ccc;
+	display: block;
+	padding: 15px 20px;
+	cursor: pointer;
+}
+
+/* 二級選單 */
+.sub .menu__item--block {
+	height: 0px;
+	overflow: hidden;
+	transition: .5s;
+}
+
+.sub.open .menu__item--block {
+	height: 50px;
+}
+
+.sub>.menu__link--block {
+	position: relative;
+}
+
+.sub>.menu__link--block::after {
+	content: "\f078";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	position: absolute;
+	top: 46%;
+	right: 20px;
+	transform: translateY(-50%) rotate(0deg);
+	font-size: 20px;
+	transition: .5s;
+}
+
+.sub.open>.menu__link--block::after {
+	transform: translateY(-50%) rotate(180deg);
+}
+
+.out__cancel::after {
+	width: 35px;
+	height: 35px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 25px;
+}
+
+.out__cancel::after {
+	content: "\58";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	font-size: 32px;
+	background: #2e2e2e;
+	color: #fff;
+}
+
+
+
+.icon__logo {
+	width: 16px;
+	height: 15px;
+	margin-right: 10px;
+}
+
+
+
+@media screen and (min-width:769px) {
+	.pc-none {
+		display: none;
+	}
+
+}
+
+@media screen and (max-width:768px) {
+	.header__nav {
+		display: none;
+	}
+
+	.header__mobileBtn {
+		width: 100px;
+		height: 100px;
+	}
+
+}
