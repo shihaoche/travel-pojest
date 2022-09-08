@@ -1,18 +1,5 @@
 $(function () {
 
-  // header滾動置頂
-  $(window).scroll(function () {
-    var scrollTop = $(window).scrollTop(); //抓取滾動的位置
-    // console.log(scrollTop)
-
-    if (scrollTop > 0) {
-      $(".k-header").addClass("scroll");
-    } else {
-      $(".k-header").removeClass("scroll");
-    }
-  });
-
-
   // 旅遊規劃
    $(function () {
     var max_fields = 20;
