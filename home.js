@@ -14,12 +14,14 @@ $(function () {
         );
       }
       $(wrapper).on("click", ".travel__li", function (e) {
-        e.preventDefault(); $(this).parent('li').remove(); x--;
+        e.preventDefault(); 
+        $(this).parent('li').remove(); x--;
       })
     })
 
   });
 
+  
   //下拉選單選擇後下面顯示別的選項
   //全部選擇隱藏
   //旅遊備忘
@@ -35,17 +37,20 @@ $(function () {
 
 });
 
+//旅遊規劃清除送出
+function clearbutton(){
+  document.getElementById("travel__mappoto--menu").innerHTML = "";
+  document.getElementById("menu").innerHTML = "";
+}
+
 //旅遊規劃日期顯示
 function menubutton() {
   var T = document.getElementById("menuday").value;
   document.getElementById("menu").innerHTML = " 規劃日期：" + T;
 }
 
-//旅遊規劃清除
-function dateclear(){
-  document.getElementById("menu").innerHTML = "";
-  document.getElementById("travel__mappoto--menu").innerHTML = "";
-}
+
+
 
 
 //旅遊預算

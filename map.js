@@ -41,6 +41,12 @@ if (navigator.geolocation) {
 
 
 
+
+  
+
+
+
+
 // 搜尋設定
   const input = document.getElementById('pac-input');
   const searchBox = new google.maps.places.SearchBox(input);
@@ -102,44 +108,3 @@ if (navigator.geolocation) {
     map.fitBounds(bounds);
   });
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-      
-
-      
-  
-
-  
-
-
- 
-
-
-
-

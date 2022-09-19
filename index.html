@@ -70,13 +70,13 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe> -->
             <div class="travel__mappoto--text">
                 <h1>規劃清單:</h1>
-                <input type="date" class="travel__mappoto--date" id="menuday" onclick="dateclear()">
+                <input type="date" class="travel__mappoto--date" id="menuday" >
                 <button id="add" class="travel__money--button" onclick="menubutton()">新增表格</button>
                 <div class="travel__mappoto--frame">
                     <h3 id="menu"></h3>
                     <ul class="travel__mappoto--ul" id="travel__mappoto--menu">
                     </ul>
-                    <button class="travel__money--button">送出表單</button>          
+                    <button class="travel__money--button" onclick="clearbutton()">送出表單</button>          
                 </div>
             </div>
         </div>
@@ -202,7 +202,7 @@
             </div>
             <div class="travel__money--ton menu-none">
                 <button class="travel__money--button" onclick="moneyclick()">金額送出</button>
-                <!-- <button onclick="update_data()">按我更新</button> -->
+                <!-- <button class="travel__money--button" onclick="update_data()">RESET</button> -->
             </div>
             <div class="travel__money--menuall menu-none">
                 <h3 id="demo2">總表：</h3>
@@ -258,7 +258,7 @@
                 <input type="checkbox" name="" class="travel__menu--box">
                 <label for="hobby-landscape">盥洗用具</label>
             </li>
-            <li>
+            <!-- <li>
                 <input type="checkbox" name="" class="travel__menu--box">
                 <label for="hobby-landscape">毛巾</label>
 
@@ -323,7 +323,7 @@
             <li>
                 <input type="checkbox" name="" class="travel__menu--box">
                 <label for="hobby-landscape">盥洗用具</label>
-            </li>
+            </li> -->
         </ul>
 
         <ul class="travel__menu--check" id="travel__menu--Self-help">
@@ -434,7 +434,7 @@
             </li>
 
         </ul>
-        <img src="/travel-pojest/img/7782.JPG" alt="" class="travel__share--poto">
+        <img src="img/7782.JPG" alt="" class="travel__share--poto">
     </nav>
     <!-- 分享選單 -->
     <footer id="travel__share">
@@ -447,7 +447,7 @@
                 <a href="#"><i class="fa-brands fa-line "></i></a>
                 <a href="#"><i class="fa-brands fa-twitter "></i></a>
             </div>
-            <img src="/travel-pojest/img/1148.JPG" alt="" class="travel__share--poto">
+            <img src="img/1148.JPG" alt="" class="travel__share--poto">
         </div>
     </footer>
 
@@ -475,15 +475,15 @@
                     <ul>
                         <li class="menu__item--block">
                             <a href="" class="menu__link--block menu__link--text">
-                                <img src="/travel-pojest/img/ig.png" alt="" class="icon__logo">InstaGram</a>
+                                <img src="img/ig.png" alt="" class="icon__logo">InstaGram</a>
                         </li>
                         <li class="menu__item--block">
                             <a href="" class="menu__link--block menu__link--text">
-                                <img src="/travel-pojest/img/line.png" alt="" class="icon__logo">LINE</a>
+                                <img src="img/line.png" alt="" class="icon__logo">LINE</a>
                         </li>
                         <li class="menu__item--block">
                             <a href="" class="menu__link--block menu__link--text">
-                                <img src="/travel-pojest/img/FB.png" alt="" class="icon__logo">FaceBook</a>
+                                <img src="img/FB.png" alt="" class="icon__logo">FaceBook</a>
                         </li>
                     </ul>
                 </li>
