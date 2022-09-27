@@ -1,7 +1,7 @@
 $(function () {
 
   // 旅遊規劃
-   $(function () {
+  $(function () {
     var max_fields = 20;
     var wrapper = $(".travel__mappoto--ul")
     var x = 1;
@@ -10,18 +10,18 @@ $(function () {
       if (x < max_fields) {
         x++;
         $(wrapper).append(
-          '<li><input type="time" class="travel__mappoto--li"> <input type="text" class="travel__mappoto--li"><input type="text" class="travel__mappoto--li1"> <a href="" class="travel__li">刪除</a>'
+          '<li>時間：<input type="time" class="travel__mappoto--li travel__mappoto--time">地點名稱：<input type="text" class="travel__mappoto--li travel__mappoto--name">地址：<input type="text" class="travel__mappoto--li1 travel__mappoto--address"> <a href="" class="travel__li">刪除</a>'
         );
       }
       $(wrapper).on("click", ".travel__li", function (e) {
-        e.preventDefault(); 
+        e.preventDefault();
         $(this).parent('li').remove(); x--;
       })
     })
 
   });
 
-  
+
   //下拉選單選擇後下面顯示別的選項
   //全部選擇隱藏
   //旅遊備忘
@@ -37,10 +37,63 @@ $(function () {
 
 });
 
-//旅遊規劃清除送出
-function clearbutton(){
-  document.getElementById("travel__mappoto--menu").innerHTML = "";
-  document.getElementById("menu").innerHTML = "";
+//旅遊規劃送出
+function clearbutton() {
+  //時間設定
+  const time = [];
+  timeobj = document.getElementsByClassName("travel__mappoto--time");
+  //input 存陣列
+  for (var i = 0; i < timeobj.length; i++) {
+    if (timeobj[i].value.length > 0) {
+      time.push(timeobj[i].value);
+    };
+  }; //console.log(time);
+  //陣列一個一個新增顯示 
+  var timestr = ''; //給一個空值位置
+  for(var i=0;i<time.length;i++){
+    var content = '<span style=margin-top:10px;>'+ time[i] +'</span>';
+    timestr += content; //innerHTML特性會每跑一次會清空一次，故要空值位置去存
+  };
+  document.getElementById("travel__mappoto--menu-time").innerHTML  = timestr;
+
+
+
+  //地點名稱設定
+  const addressname = [];
+  addressnameobj = document.getElementsByClassName("travel__mappoto--name");
+  //input 存陣列
+  for (var i = 0; i < addressnameobj.length; i++) {
+    if (addressnameobj[i].value.length > 0) {
+      addressname.push(addressnameobj[i].value);
+    }
+  };
+  //陣列一個一個新增顯示 
+  var addressnamestr = ''; //給一個空值位置
+  for(var i=0;i<addressname.length;i++){
+    var content = '<span style=margin-top:10px;>'+ addressname[i] +'</span>';
+    addressnamestr += content; //innerHTML特性會每跑一次會清空一次，故要空值位置去存
+  };
+  document.getElementById("travel__mappoto--menu-name").innerHTML = addressnamestr;
+
+
+
+  //地點地址
+  const address = [];
+  addressobj = document.getElementsByClassName("travel__mappoto--address");
+  //input 存陣列
+  for (var i = 0; i < addressobj.length; i++) {
+    if (addressobj[i].value.length > 0) {
+      address.push(addressobj[i].value);
+    }
+  }; 
+  //陣列一個一個新增顯示 
+  var addressstr = ''; //給一個空值位置
+  for(var i=0;i<address.length;i++){
+    var content = '<span style=margin-top:10px;>'+ address[i] +'</span>';
+    addressstr += content; //innerHTML特性會每跑一次會清空一次，故要空值位置去存
+  };
+  document.getElementById("travel__mappoto--menu-address").innerHTML = addressstr;
+  // document.getElementById("menu").innerHTML = "";
 }
 
 //旅遊規劃日期顯示
@@ -67,7 +120,7 @@ function myFunction() {
 
 
 
-  
+
 
 
 

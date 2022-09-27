@@ -258,6 +258,30 @@ textarea {
 	width: 300px;
 }
 
+.travel__mappoto--menu-ul{
+	display: flex;
+	justify-content: center;
+
+}
+
+.travel__mappoto--menu-ul>li{
+	font-size: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 20px;
+}
+.travel__mappoto--menu-ul>li>span{
+	margin-top: 10px;
+}
+#travel__mappoto--menu-time{
+	margin-right: 15px;
+}
+.travel__mappoto--menu-obj{
+	display: flex;
+	flex-flow:column wrap ;
+	
+}
+
 @media screen and (max-width:768px) {
 
 	.travel__mappoto--li,
