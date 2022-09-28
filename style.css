@@ -258,6 +258,13 @@ textarea {
 	width: 300px;
 }
 
+.travel__money--button-menu{
+	margin-top: 10px;
+}
+#travel__mappoto--menu-div{
+	margin-top: 10px;
+	font-size: 30px;
+}
 .travel__mappoto--menu-ul{
 	display: flex;
 	justify-content: center;
@@ -286,6 +293,10 @@ textarea {
 
 	.travel__mappoto--li,
 	.travel__mappoto--li1 {
+		font-size: 14px;
+	}
+
+	.travel__mappoto--menu-ul>li{
 		font-size: 14px;
 	}
 }

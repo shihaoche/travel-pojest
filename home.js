@@ -39,6 +39,11 @@ $(function () {
 
 //旅遊規劃送出
 function clearbutton() {
+  var data = document.getElementById("menuday").value;
+  document.getElementById("travel__mappoto--menu-div").innerHTML = "規劃日期：" + data;
+  document.getElementById("travel__mappoto--menu-span-time").innerHTML = "時間：";
+  document.getElementById("travel__mappoto--menu-span-name").innerHTML = "地點名稱：";
+  document.getElementById("travel__mappoto--menu-span-address").innerHTML = "地址：";
   //時間設定
   const time = [];
   timeobj = document.getElementsByClassName("travel__mappoto--time");
@@ -93,7 +98,19 @@ function clearbutton() {
     addressstr += content; //innerHTML特性會每跑一次會清空一次，故要空值位置去存
   };
   document.getElementById("travel__mappoto--menu-address").innerHTML = addressstr;
-  // document.getElementById("menu").innerHTML = "";
+  
+}
+
+function menuclear(){
+  document.getElementById("travel__mappoto--menu").innerHTML = "";
+  document.getElementById("menu").innerHTML = "";
+  document.getElementById("travel__mappoto--menu-div").innerHTML = "";
+  document.getElementById("travel__mappoto--menu-span-time").innerHTML = "";
+  document.getElementById("travel__mappoto--menu-span-name").innerHTML = "";
+  document.getElementById("travel__mappoto--menu-span-address").innerHTML = "";
+  document.getElementById("travel__mappoto--menu-time").innerHTML  = "";
+  document.getElementById("travel__mappoto--menu-name").innerHTML = "";
+  document.getElementById("travel__mappoto--menu-address").innerHTML = "";
 }
 
 //旅遊規劃日期顯示
