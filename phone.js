@@ -1,4 +1,3 @@
-/* 二級選單開合 */
 $(function () {
 
     var subMenu = $(".sub")
@@ -10,7 +9,6 @@ $(function () {
   
     });
   
-    /* 手機選單開合 */
     $(".header__mobileBtn").click(function () {
       $(".header__mobileMenu").addClass("open");
   
