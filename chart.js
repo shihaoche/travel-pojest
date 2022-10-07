@@ -2,24 +2,21 @@ function moneyclick() {
     const website = [];
     obj = document.getElementById("travel__money--eat").getElementsByClassName("travel__money--inmoney");
   
-    //input 存陣列
     for (var i = 0; i < obj.length; i++) {
       if (obj[i].value.length > 0) {
         website.push(obj[i].value);
       }
      }; console.log(website);
-    //陣列字串轉數字
+
     let web = website.map(function (x) {
       return parseInt(x, 10);
     });   console.log(web);
   
-    //陣列轉數字後計算
     let eat = 0;
     for (let i = 0; i <= 5; i++) {
       eat += web[i];
     };   console.log(eat);
   
-    //陣列轉數字後計算
     let drink = 0;
     for (let i = 6; i <= 11; i++) {
       drink += web[i];
@@ -30,31 +27,29 @@ function moneyclick() {
       play += web[i];
     };  console.log(play);
 
-    //陣列轉數字後計算
     let inl = web[17];
     console.log(inl);
   
  
   
 
-  
-  //圖表
-  $('#breakfast').each(function(){    //移除表生成區
+ 
+  $('#breakfast').each(function(){  
     $(this).remove();
   });
-  $('.travel__money--menuall').append(    //新增表生成區
+  $('.travel__money--menuall').append(    
     '<canvas id="breakfast" width="300" height="300"></canvas>'
   );
 
     const ctx = document.getElementById('breakfast');
     const breakfast = new Chart(ctx, {
-      type: 'doughnut', //圖表類型
+      type: 'doughnut',
       data: {
-        labels: ['吃', '喝', '玩', '住'], //標題
+        labels: ['吃', '喝', '玩', '住'], 
         datasets: [{
-          label: '# of Votes',      //標籤
-          data: [eat, drink, play, inl],  // 資料
-          backgroundColor: [         // 背景色
+          label: '# of Votes',      
+          data: [eat, drink, play, inl],  
+          backgroundColor: [         
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
             'rgba(255, 206, 86, 0.2)',
@@ -70,7 +65,7 @@ function moneyclick() {
             // 'rgba(153, 102, 255, 1)',
             // 'rgba(255, 159, 64, 1)'
           ],
-          borderWidth: 2            // 外框寬度
+          borderWidth: 2           
         }]
       } ,
       options: {
@@ -79,15 +74,7 @@ function moneyclick() {
               display: true,
           }
       },
-      // 圖表外面x與Y軸刻度
-      // scales: {
-      //     x: {
-      //         type: 'linear'
-      //     },
-      //     y: {
-      //         type: 'linear'
-      //     }
-      // }
+ 
       
     }
     }) ;
