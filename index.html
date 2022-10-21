@@ -13,7 +13,6 @@
     <script src="phone.js"></script>
     <script src="map.js"></script>
     <script src="chart.js"></script>
-    <!-- <script src="ajax.js"></script> -->
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMA41RMXXhzu-fpkqIvdCGKgQ3wXEpSwo&callback=initAutocomplete&libraries=visualization&libraries=places&v=weekly&callback=initMap"
         defer></script>
@@ -22,6 +21,7 @@
 
 <body>
     <header class="header__menu">
+        <!-- 手機板漢堡按鈕 -->
         <div id="js-mobileBtn" class="header__mobileBtn pc-none">
             <i class="fa-solid fa-bars icon"></i>
         </div>
@@ -214,6 +214,7 @@
             </div>
         </div>
     </nav>
+    <!-- 下拉式選單 -->
     <nav class="travel__option--menu" id="travel_option">
         <h2>旅遊備忘：</h2>
         <label for="travel"></label>
@@ -227,6 +228,7 @@
 
     </nav>
     <nav class="travel__menucheck">
+        <!-- 多選選單 -->
         <ul class="travel__menu--check" id="travel__menu--foreign">
             <li>
                 <input type="checkbox" name="" class="travel__menu--box">
@@ -260,6 +262,72 @@
                 <input type="checkbox" name="" class="travel__menu--box">
                 <label for="hobby-landscape">盥洗用具</label>
             </li>
+            <!-- <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">毛巾</label>
+
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">薄外套</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">厚外套</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">充電線</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">充電豆腐頭</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">轉換插座</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">換洗衣物</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">盥洗用具</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">毛巾</label>
+
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">薄外套</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">厚外套</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">充電線</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">充電豆腐頭</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">轉換插座</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">換洗衣物</label>
+            </li>
+            <li>
+                <input type="checkbox" name="" class="travel__menu--box">
+                <label for="hobby-landscape">盥洗用具</label>
+            </li> -->
         </ul>
 
         <ul class="travel__menu--check" id="travel__menu--Self-help">
@@ -372,6 +440,7 @@
         </ul>
         <img src="img/7782.JPG" alt="" class="travel__share--poto">
     </nav>
+    <!-- 分享選單 -->
     <footer id="travel__share">
         <div class="travel__share">
             <h3 class="travel__share--text">旅遊分享：</h3>
@@ -386,6 +455,7 @@
         </div>
     </footer>
 
+    <!-- 手機版選單 -->
     <div class="header__mobileMenu">
         <div class="mobileMenu__header">
             <h3>旅 遊 選 單</h3>
