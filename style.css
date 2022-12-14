@@ -413,6 +413,9 @@ textarea {
 	.travel__menu--check {
 		font-size: 25px;
 	}
+	.travel__menucheck{
+		margin-top: 50px;
+	}
 }
 
 
